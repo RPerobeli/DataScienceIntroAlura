@@ -27,7 +27,7 @@ tmbd = pd.read_csv("aula0/aula0/ml-latest-small/tmdb_5000_movies.csv")
  print(tmbd.original_language.unique())
  '''
 
-
+'''
 categorias_por_lingua = tmbd["original_language"].value_counts(
 ).to_frame().reset_index()
 # print(categorias_por_lingua)
@@ -61,3 +61,11 @@ plt.show()
 sns.barplot(x=categorias_por_lingua_outros['index'],
             y=categorias_por_lingua_outros['original_language'])
 plt.show()
+'''
+
+notas_toy_story = notas.query("movieId ==1")
+notas_jumanji = notas.query("movieId ==2")
+
+print(
+    notas_toy_story['rating'].mean()
+)
