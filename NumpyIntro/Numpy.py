@@ -1,6 +1,5 @@
 # %%
 import numpy as np
-
 # main
 # %%
 np.arange(10)
@@ -22,8 +21,19 @@ KmMedio
 Dados = np.array([kmList, Idade])
 Dados.shape
 # %%
-#indexação booleana
+# indexação booleana
 Dados[Dados > 100]
 # %%
 Dados[1] >= 10
+# %%
+Valor = np.loadtxt('data/carros-valor.txt')
+Valor
+# %%
+dataset = np.column_stack((Anos, kmList, Valor))
+# %%
+np.mean(dataset[:, 1])
+# %%
+np.std(dataset[:, 1])
+# %%
+dataset[1].sum()
 # %%
